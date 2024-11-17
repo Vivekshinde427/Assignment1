@@ -1,5 +1,6 @@
 package com.example.signupformapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -60,9 +61,15 @@ class MainActivity : AppCompatActivity() {
                 isValid = false
             }
 
-            // Show success message if all fields are valid
+            // If all fields are valid, show the success message and navigate
             if (isValid) {
+                // Show success message
                 Toast.makeText(this, "Form submitted successfully!", Toast.LENGTH_SHORT).show()
+
+                // Navigate to the Thank You Screen
+                val intent = Intent(this, ThankYouActivity::class.java)
+                startActivity(intent)
+                finish() // Close MainActivity to prevent going back to it
             }
         }
     }
