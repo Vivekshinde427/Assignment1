@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.SignUpFormApp" parent="Base.Theme.SignUpFormApp" />
+    <style name="Theme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
 </resources>
